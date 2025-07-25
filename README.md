@@ -14,7 +14,7 @@ This project is an AI-powered chatbot that helps you interact with AWS using **n
   - Describe all EIPs
 - 📡 Executes real AWS tasks using Boto3
 - 💬 Simple web frontend for user interaction
-- 🔁 Falls back to generic LLM response if no AWS-related intent is found
+- 🔁 Falls back to a generic LLM response if no AWS-related intent is found
 
 ---
 
@@ -33,8 +33,9 @@ aws-assistant/
 │   ├── app_ui.py              # Flask frontend app (serves HTML)
 │   └── static/
 │       ├── script.js          # Handles user interaction & API calls
-│       └── style.css          # (Optional) styling
-│
+│   |__ templates
+|       |__index.html
+│ 
 └── README.md                  # You're here!
 ```
 
@@ -47,7 +48,7 @@ aws-assistant/
 - Boto3 (`pip install boto3`)
 - An OpenRouter API Key (https://openrouter.ai)
 - AWS credentials (in `~/.aws/credentials` or via env vars)
-- Access to AWS account with necessary permissions
+- Access to an AWS account with the necessary permissions
 
 ---
 
@@ -115,7 +116,7 @@ Runs the frontend at `http://127.0.0.1:3000`.
    - `List running EC2 instances`
    - `Describe all elastic IPs`
    - `Tell me about AWS`
-3. Bot will respond based on detected intent and return AWS info.
+3. Bot will respond based on the detected intent and return AWS info.
 
 ---
 
